@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/zood/zoodpay).
+We accept contributions via Pull Requests on [Github](https://github.com/orientswiss/zoodpay-laravel-package).
 
 
 ## Pull Requests
