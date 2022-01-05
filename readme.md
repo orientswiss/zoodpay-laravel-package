@@ -1,4 +1,4 @@
-# zoodpay
+# ZoodPay Laravel Package
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Travis](https://img.shields.io/travis/zoodpay/laravel-package.svg?style=flat-square)]()
@@ -183,8 +183,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [ZoodPay](https://github.com/zood)
-- [All Contributors](https://github.com/zood/zoodpay/contributors)
+- [ZoodPay](https://github.com/orientswiss)
 
 ## Security
 If you discover any security-related issues, please email mohammadali.namazi@zoodpay.com instead of using the issue tracker.
