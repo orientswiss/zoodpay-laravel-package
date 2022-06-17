@@ -1,8 +1,8 @@
 <?php
-namespace Zoodpay\Adapters;
+namespace ZoodPay\Adapters;
 
-use ZoodPay\MerchantApi\SDK\Config;
-use ZoodPay\MerchantApi\SDK\Requests\GetConfiguration;
+use ZoodPay\Api\SDK\Config;
+
 require dirname(__DIR__, 2) . '/vendor/zoodpay/api-php-sdk/vendor/autoload.php';
 
 

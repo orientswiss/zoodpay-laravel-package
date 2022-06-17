@@ -1,6 +1,6 @@
 <?php
-namespace Zoodpay\Model;
-class DeliveryDate extends \ZoodPay\MerchantApi\SDK\Model\Delivery
+namespace ZoodPay\Model;
+class DeliveryDate extends \ZoodPay\Api\SDK\Model\Delivery
 {
 
     private $transaction_id;

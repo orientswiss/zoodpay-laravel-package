@@ -4,12 +4,12 @@ namespace Tests;
 
 use Mockery;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ZoodPay\Adapters\ZoodPayConfigAdapter;
-use ZoodPay\CoreZoodPay;
+use Zoodpay\Adapters\ZoodPayConfigAdapter;
+use Zoodpay\CoreZoodPay;
 use ZoodPay\ZoodpayServiceProvider;
 use ZoodPay\Api\SDK\Config;
 
-class TestCase extends Orchestra
+class ZoodPayTestCase extends Orchestra
 {
 
     /**

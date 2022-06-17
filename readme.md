@@ -1,8 +1,7 @@
 # ZoodPay Laravel Package
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Travis](https://img.shields.io/travis/zoodpay/laravel-package.svg?style=flat-square)]()
-[![Total Downloads](https://img.shields.io/packagist/dt/zood/zoodpay.svg?style=flat-square)](https://packagist.org/packages/zoodpay/laravel-package)
+[![Total Downloads](https://img.shields.io/packagist/dt/zoodpay/laravel-package)](https://packagist.org/packages/zoodpay/laravel-package)
 
 ## Install
 `composer require zoodpay/laravel-package`
@@ -16,7 +15,7 @@ Check that ZoodpayServiceProvider is added in the config/app.php, or Manually ad
          * Laravel Framework Service Providers...
          */
      ...
- Zoodpay\ZoodpayServiceProvider::class,
+ ZoodPay\ZoodpayServiceProvider::class,
 ]
 ```
 Add zoodpay credentials to the config/services.php config file as below.
@@ -64,7 +63,7 @@ $this->app->zoodpay->getRefundResponseSignature($merchant_refund_reference, $ref
  * Initiate the Models and set Values
  * $billing = new Model\BillingShippingInfo();
  * $customer = new Model\CustomerInfo();
- * $items = new Model\ItemsInfo();
+ * $items[] = new Model\ItemsInfo();
  * $order = new Model\OrderInfo();
  * $shippingService = new Model\ShippingServiceInfo();
  * $shipping = $billing;
@@ -116,7 +115,7 @@ $this->app->zoodpay->availableZoodPayService($amount)
  * Initiate the Models and set Values
  * $billing = new Model\BillingShippingInfo();
  * $customer = new Model\CustomerInfo();
- * $items = new Model\ItemsInfo();
+ * $items[] = new Model\ItemsInfo();
  * $order = new Model\OrderInfo();
  * $shippingService = new Model\ShippingServiceInfo();
  * $shipping = $billing;

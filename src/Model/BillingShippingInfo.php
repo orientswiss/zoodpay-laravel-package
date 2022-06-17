@@ -1,8 +1,8 @@
 <?php
 
-namespace Zoodpay\Model;
+namespace ZoodPay\Model;
 
-class BillingShippingInfo extends \ZoodPay\MerchantApi\SDK\Model\BillingShipping
+class BillingShippingInfo extends \ZoodPay\Api\SDK\Model\BillingShipping
 {
 
 }

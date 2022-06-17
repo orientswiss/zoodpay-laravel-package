@@ -1,7 +1,7 @@
 {
     "name": "zoodpay/laravel-package",
     "description": "Laravel Package for processing payments through ZoodPay BNPL.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "package",
     "license": "MIT",
     "keywords": [
@@ -11,10 +11,11 @@
         {
             "name": "Mohammadali Namazi",
             "email": "mohammadali.namazi@zoodpay.com",
-            "role": "Developer/Integration Enginner"
+            "role": "Integration Enginner"
         }
     ],
     "require": {
+        "zoodpay/api-php-sdk": ">=1.0.1",
         "illuminate/support": "^7.0|^8.0",
         "guzzlehttp/guzzle": "~6.0 || ~7.0",
         "ext-json": "*"
@@ -22,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Zoodpay\\": "./src",
-            "Zoodpay\\sdk\\": "./vendor/zoodpay/api-php-sdk/src"
+            "ZoodPay\\": "./src",
+            "ZoodPay\\sdk\\": "./vendor/zoodpay/api-php-sdk/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zoodpay\\Tests\\": "tests"
+            "ZoodPay\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -37,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Zoodpay\\ZoodpayServiceProvider"
+                "ZoodPay\\ZoodpayServiceProvider"
             ]
         }
     },

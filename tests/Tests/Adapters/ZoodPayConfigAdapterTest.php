@@ -6,11 +6,12 @@ require dirname(__DIR__, 3) . '/vendor/autoload.php';
 
 use Mockery;
 use Tests\TestCase;
+use Tests\ZoodPayTestCase;
 use Throwable;
 use Zoodpay\Adapters\ZoodPayConfigAdapter;
 use Zoodpay\CoreZoodPay;
 use Zoodpay\ZoodpayServiceProvider;
-use ZoodPay\MerchantApi\SDK\Config;
+use Zoodpay\Api\SDK\Config;
 
 
 class ZoodPayConfigAdapterTest extends TestCase

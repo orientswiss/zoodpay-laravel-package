@@ -1,6 +1,6 @@
 <?php
-namespace Zoodpay\Model;
-class CreateRefund extends \ZoodPay\MerchantApi\SDK\Model\RefundCreate
+namespace ZoodPay\Model;
+class CreateRefund extends \ZoodPay\Api\SDK\Model\RefundCreate
 {
 
 }

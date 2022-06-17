@@ -1,11 +1,12 @@
 <?php
 
-namespace Zoodpay;
+namespace ZoodPay;
 
 use Closure;
 use Illuminate\Routing\Route;
+use ZoodPay\CoreZoodPay;
 use Illuminate\Support\ServiceProvider;
-use Zoodpay\Adapters\ZoodPayConfigAdapter;
+use ZoodPay\Adapters\ZoodPayConfigAdapter;
 
 class ZoodpayServiceProvider extends ServiceProvider
 {

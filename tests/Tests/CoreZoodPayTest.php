@@ -6,10 +6,10 @@ require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 use JsonException;
 use phpDocumentor\Reflection\Types\This;
-use Zoodpay\Adapters\ZoodPayConfigAdapter;
+use ZoodPay\Adapters\ZoodPayConfigAdapter;
 use Tests\TestCase;
-use Zoodpay\CoreZoodPay;
-use Zoodpay\Model;
+use ZoodPay\CoreZoodPay;
+use ZoodPay\Model;
 
 class CoreZoodPayTest extends TestCase
 {
@@ -38,7 +38,7 @@ class CoreZoodPayTest extends TestCase
      */
     public function testGetCreditBalance(){
 
-        $res = $this->app->zoodpay->getCreditBalance("998");
+        $res = $this->app->zoodpay->getCreditBalance("998123456890");
         echo "===================ZoodPay Credit Balance==================" . "\n";
         foreach ($res["credit_balance"] as $key => $value) {
 
@@ -97,7 +97,7 @@ class CoreZoodPayTest extends TestCase
 
         $billing = new Model\BillingShippingInfo();
         $billing->setName("Test User");
-        $billing->setPhoneNumber("998365896609");
+        $billing->setPhoneNumber("77123456789");
         $billing->setAddressLine1("Test Address 1");
         $billing->setAddressLine2("Test Address 2");
         $billing->setCity("Test City");
@@ -132,15 +132,16 @@ class CoreZoodPayTest extends TestCase
         $shippingService->setShippedAt("Date");
         $shippingService->setTracking("HHHHHHH0-hhsh");
 
-        $items = new Model\ItemsInfo();
-        $items->setName("Test Product" . $this->generateARandomString());
-        $items->setCategories(["Products-Category1"]);
-        $items->setCurrencyCode("UZS");
-        $items->setDiscountAmount(0.00);
-        $items->setPrice(150000);
-        $items->setQuantity(1.00);
-        $items->setSku("Test-SKU" . $this->generateARandomString());
-        $items->setTaxAmount(0.00);
+        $items[]= new Model\ItemsInfo();
+        $items[0]->setName("Test Product" . $this->generateARandomString());
+        $items[0]->setCategories(["Products-Category1"]);
+        $items[0]->setCurrencyCode("UZS");
+        $items[0]->setDiscountAmount(1.00);
+        $items[0]->setPrice(600.00);
+        $items[0]->setQuantity(1.00);
+        $items[0]->setSku("Test-SKU". $this->generateARandomString());
+        $items[0]->setTaxAmount(1.00);
+
         echo "\n"."===================ZoodPay Create Transaction ==================" . "\n";
        $response =  $this->app->zoodpay->createTransaction($billing, $customer, $items, $order, $shipping, $shippingService);
         $this->assertStringContainsString("transaction_id", $response, "Transaction do not have transaction id");

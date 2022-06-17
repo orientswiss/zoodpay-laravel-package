@@ -1,5 +1,5 @@
 <?php
-namespace Zoodpay\Model;
+namespace ZoodPay\Model;
 class ConfigurationResponse
 {
 

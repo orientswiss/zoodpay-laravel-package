@@ -1,13 +1,13 @@
 <?php
 
-namespace Zoodpay\Http\Controller;
+namespace ZoodPay\Http\Controller;
 
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Zoodpay\Adapters\ZoodPayConfigAdapter;
-use Zoodpay\CoreZoodPay;
+use ZoodPay\Adapters\ZoodPayConfigAdapter;
+use ZoodPay\CoreZoodPay;
 
 class Callback extends Controller
 {
@@ -186,7 +186,7 @@ class Callback extends Controller
         return [
             'amount' => 'required|string|max:15',
             'created_at' => 'string|max:25',
-            'errorMessage' => 'string|max:30',
+            'errorMessage' => 'string|max:256',
             'status' => 'required|string|max:15',
             'transaction_id' => 'required|string|max:25',
             'merchant_order_reference' => 'required|string|max:25',

@@ -1,20 +1,20 @@
 <?php
 
-namespace Zoodpay;
+namespace ZoodPay;
 
-use ConfigurationResponse;
+use ZoodPay\Model\ConfigurationResponse;
 use GuzzleHttp\Exception\BadResponseException;
 use PhpParser\JsonDecoder;
-use ZoodPay\MerchantApi\SDK\Model\Credit;
-use ZoodPay\MerchantApi\SDK\Requests\CreateRefund;
-use ZoodPay\MerchantApi\SDK\Requests\CreateTransaction;
-use ZoodPay\MerchantApi\SDK\Requests\GetConfiguration;
-use ZoodPay\MerchantApi\SDK\Requests\GetCreditBalance;
-use ZoodPay\MerchantApi\SDK\Requests\GetRefundById;
-use ZoodPay\MerchantApi\SDK\Requests\HealthCheck;
-use ZoodPay\MerchantApi\SDK\Requests\SetTransactionDelivery;
-use ZoodPay\MerchantApi\SDK\Requests\Signature;
-use Zoodpay\Model\DeliveryDate;
+use ZoodPay\Api\SDK\Model\Credit;
+use ZoodPay\Api\SDK\Requests\CreateRefund;
+use ZoodPay\Api\SDK\Requests\CreateTransaction;
+use ZoodPay\Api\SDK\Requests\GetConfiguration;
+use ZoodPay\Api\SDK\Requests\GetCreditBalance;
+use ZoodPay\Api\SDK\Requests\GetRefundById;
+use ZoodPay\Api\SDK\Requests\HealthCheck;
+use ZoodPay\Api\SDK\Requests\SetTransactionDelivery;
+use ZoodPay\Api\SDK\Requests\Signature;
+use ZoodPay\Model\DeliveryDate;
 
 require dirname(__DIR__, 1) . '/vendor/zoodpay/api-php-sdk/vendor/autoload.php';
 
@@ -90,7 +90,7 @@ class CoreZoodPay
      * @param $merchant_reference_no
      * @param $transaction_id
      * @return string
-     * @throws \ZoodPay\MerchantApi\SDK\Exception\InvalidArgumentException
+     * @throws \Zoodpay\Api\SDK\Exception\InvalidArgumentException
      */
     public function getResponseSignature($amount, $merchant_reference_no, $transaction_id){
         return (new Signature())->ZoodPayResponseSignature($this->cfgAdapter->__get('market_code'),$this->cfgAdapter->__get('currency'), $amount, $merchant_reference_no, $transaction_id);

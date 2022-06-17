@@ -1,6 +1,6 @@
 <?php
-namespace Zoodpay\Model;
-class CustomerInfo extends \ZoodPay\MerchantApi\SDK\Model\Customer
+namespace ZoodPay\Model;
+class CustomerInfo extends \ZoodPay\Api\SDK\Model\Customer
 {
 
 }
